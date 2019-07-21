@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd ">
+	
+	
+	<!-- 扫描包 -->
+	<context:component-scan base-package="com.qf"/>
+	
+	<bean id="teacher" class="com.qf.pojo.Teacher">
+		<property name="name" value="熊大"/>
+		<!-- 数组类型 -->
+		<property name="strs">
+		<array>
+			<value>红色</value>
+			<value>白色</value>
+			<value>蓝色</value>
+			<value>紫色</value>
+		</array>
+		</property>
+		<!-- 集合类型 -->
+		<property name="list">
+			<list>
+				<value>中国</value>
+				<value>德国</value>
+				<value>日本</value>
+				<value>纽约</value>
+			</list>
+		</property>
+		<!-- map类型 -->
+		<property name="maps">
+			<map>
+				<entry key="a" value="北京"/>
+				<entry key="b" value="上海"/>
+				<entry key="c" value="天津"/>
+				<entry key="d" value="武汉"/>
+			</map>
+		</property>
+		<!-- Properties类型 -->
+		<property name="pro">
+			<props>
+				<prop key="name">狮子</prop>
+				<prop key="age">11</prop>
+				<prop key="sex">母</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
